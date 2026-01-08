@@ -10,7 +10,7 @@ class scoreboard;
     repeat(12)
     begin
    
-      m2s.get(trans);#1;
+      m2s.get(trans);
     trans.display("Scoreboard signals");
     //reference modulr or golden dut
       if(((trans.a ^ trans.b ^ trans.c) == trans.sum) && (((trans.a & trans.b) | (trans.b & trans.c) | (trans.c & trans.a)) == trans.cout))    
