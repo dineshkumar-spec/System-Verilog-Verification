@@ -12,11 +12,12 @@ class driver;
     begin
     transaction trans;
     gen2drv.get(trans);
+     #1; 
     vif.a <= trans.a;
     vif.b <= trans.b;
     vif.c <= trans.c;
-    #1;
       trans.display("Driver class signals");
+      #2;
     end
   endtask
 endclass
