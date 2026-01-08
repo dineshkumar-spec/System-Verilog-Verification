@@ -12,7 +12,6 @@ class generator;
     trans = new();
     trans.randomize();
     trans.display("generator class signals");
-      #2;
     gen2drv.put(trans); 
     end
   endtask
