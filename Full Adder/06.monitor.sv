@@ -8,17 +8,18 @@ class monitor;
   endfunction
   
   task main();
-    repeat(12)
-    begin
     transaction trans;
-    trans = new();
+    repeat(12)
+    begin   
     //sampling
-    trans.a <= vif.a;
-    trans.b <= vif.b;
-    trans.c <= vif.c;
-    trans.sum <= vif.sum;
-    trans.cout <= vif.cout;
-      m2s.put(trans);#1;
+    #3;
+    trans = new();
+    trans.a = vif.a;
+    trans.b = vif.b;
+    trans.c = vif.c;
+    trans.sum = vif.sum;
+    trans.cout = vif.cout;
+    m2s.put(trans);
     trans.display("Monitor class signals");
     end
   endtask
