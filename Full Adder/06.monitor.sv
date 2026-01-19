@@ -12,7 +12,7 @@ class monitor;
     repeat(12)
     begin   
     //sampling
-    #3;
+    #1;
     trans = new();
     trans.a = vif.a;
     trans.b = vif.b;
@@ -20,7 +20,7 @@ class monitor;
     trans.sum = vif.sum;
     trans.cout = vif.cout;
     m2s.put(trans);
-    trans.display("Monitor class signals");
+      trans.display("Monitor class signals");#2;
     end
   endtask
 endclass
