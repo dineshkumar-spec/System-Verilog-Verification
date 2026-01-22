@@ -1,4 +1,4 @@
-interface intf(input logic clk,reset);
-  logic d;
-  logic q;
-endinterface
+class transaction;
+rand bit d;
+  bit q;
+endclass
